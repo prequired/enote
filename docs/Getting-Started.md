@@ -53,9 +53,13 @@ git clone https://github.com/prequired/enote.git
 cd enote
 
 # Install dependencies (Linux only)
-# For Ubuntu 22.04+ and newer distributions:
-sudo apt-get install libwebkit2gtk-4.1-dev libgtk-3-dev libappindicator3-dev librsvg2-dev patchelf libayatana-appindicator3-dev
-# For older Ubuntu versions (20.04 and earlier):
+sudo apt-get update
+sudo apt-get install -y libwebkit2gtk-4.1-dev libgtk-3-dev librsvg2-dev patchelf
+
+# Install AppIndicator (try modern first, fallback to legacy)
+sudo apt-get install -y libayatana-appindicator3-dev || sudo apt-get install -y libappindicator3-dev
+
+# Alternative for older Ubuntu versions (20.04 and earlier):
 # sudo apt-get install libwebkit2gtk-4.0-dev libgtk-3-dev libappindicator3-dev librsvg2-dev patchelf
 
 # Build and run
