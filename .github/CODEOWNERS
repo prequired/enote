@@ -1,0 +1,25 @@
+# Global code owners - these users will be requested for review on all PRs
+* @prequired
+
+# Core modules - require review from core maintainers
+/src/main.rs @prequired
+/src/ui/ @prequired
+/src/features/ @prequired
+/src/storage/ @prequired
+
+# AI enhancement system - specialized knowledge required
+/src/ai/ @prequired
+
+# Build and deployment configuration
+/.github/workflows/ @prequired
+/Cargo.toml @prequired
+/tauri.conf.json @prequired
+
+# Documentation - community members can help but core team has final say
+/README.md @prequired
+/CONTRIBUTING.md @prequired
+/docs/ @prequired
+
+# Security-sensitive files
+/.github/workflows/security.yml @prequired
+/SECURITY.md @prequired

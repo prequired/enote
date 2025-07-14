@@ -1,0 +1,60 @@
+# Rust
+/target/
+**/*.rs.bk
+Cargo.lock
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment variables
+.env
+.env.local
+
+# Tauri
+src-tauri/target/
+
+# Build artifacts
+dist/
+build/
+
+# Node modules (if any)
+node_modules/
+
+# Database files (for development)
+*.db
+*.sqlite
+*.sqlite3
+
+# Temporary files
+tmp/
+temp/
+
+# User data (for testing)
+test_data/
+EdisonNote/
+
+# Coverage reports
+coverage/
+*.profraw
+
+# Backup files
+*.backup
+*.bak
+*~
+
+# Editor configs
+.editorconfig
+
+# Cache directories
+.cache/

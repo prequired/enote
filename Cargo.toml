@@ -1,0 +1,68 @@
+[package]
+name = "edison-note"
+version = "0.1.0"
+description = "An open-source, cross-platform desktop note-taking app built with Rust, Tauri, and egui"
+authors = ["Edison Tech Community"]
+license = "MIT"
+repository = "https://github.com/prequired/enote"
+edition = "2021"
+
+[build-dependencies]
+tauri-build = { version = "1.5", features = [] }
+
+[dependencies]
+# Core Tauri dependencies
+tauri = { version = "1.5", features = ["api-all", "shell-open"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# UI Framework
+eframe = { version = "0.24", features = ["default_fonts", "glow"] }
+egui = "0.24"
+egui_extras = { version = "0.24", features = ["all_loaders"] }
+
+# Markdown processing
+markdown = "1.0"
+pulldown-cmark = "0.9"
+syntect = "5.1"
+
+# Database and storage
+rusqlite = { version = "0.29", features = ["bundled"] }
+dirs = "5.0"
+
+# Networking and encryption
+reqwest = { version = "0.11", features = ["json", "rustls-tls"] }
+rustls = "0.21"
+tokio = { version = "1.0", features = ["full"] }
+tokio-tungstenite = "0.20"
+serde_derive = "1.0"
+operational-transform = "0.6"
+
+# Graph processing
+petgraph = "0.6"
+
+# Search and fuzzy matching
+fuzzy-matcher = "0.3"
+
+# Text processing
+regex = "1.7"
+image = "0.24"
+
+# Accessibility
+accesskit = "0.12"
+
+# Utilities
+uuid = { version = "1.0", features = ["v4"] }
+chrono = { version = "0.4", features = ["serde"] }
+anyhow = "1.0"
+log = "0.4"
+env_logger = "0.10"
+md5 = "0.7"
+
+[features]
+default = ["custom-protocol"]
+custom-protocol = ["tauri/custom-protocol"]
+
+[[bin]]
+name = "edison-note"
+path = "src/main.rs"
