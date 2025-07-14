@@ -53,7 +53,10 @@ git clone https://github.com/prequired/enote.git
 cd enote
 
 # Install dependencies (Linux only)
-sudo apt-get install libwebkit2gtk-4.0-dev libgtk-3-dev libappindicator3-dev librsvg2-dev patchelf
+# For Ubuntu 22.04+ and newer distributions:
+sudo apt-get install libwebkit2gtk-4.1-dev libgtk-3-dev libappindicator3-dev librsvg2-dev patchelf libayatana-appindicator3-dev
+# For older Ubuntu versions (20.04 and earlier):
+# sudo apt-get install libwebkit2gtk-4.0-dev libgtk-3-dev libappindicator3-dev librsvg2-dev patchelf
 
 # Build and run
 cargo build --release
